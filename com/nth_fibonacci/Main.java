@@ -1,5 +1,7 @@
-//objective: template for java file
-//import java.util.*;
+
+//note: by making diagram , you can solve evrtyhing 
+//just need to know the flow of a binary tree  
+
 
 class Main {
 
@@ -10,20 +12,28 @@ class Main {
 		System.out.println("Hello world!");
 
 		int answer = f(3);
-
+		System.out.println(answer);
+kjdfgsdergwege
 
 	}
 
 	public static int f (int n){
 
 
-		if (n == 0){
+		if (n == 1){
+			System.out.println(n);
+			return 1;
+		                    //this is the only hard line here 
+		}else if(n == 0){   //look at the penultimo node (if you want for this base case to exist it must be n-2)
 			System.out.println(n);
 			return 0;
-
 		}else{
+
 			System.out.println(n);
-			return f(n-1);
+			int expressionOne = f(n-1);
+			int expressionTwo = f(n-2);   
+								  
+			return expressionOne + expressionTwo;
 
 		}
 
