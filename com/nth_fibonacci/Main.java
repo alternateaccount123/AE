@@ -2,7 +2,7 @@
 //import java.util.*;
 
 class Main {
-
+//edited from github master 
 
 	public static void main(String[] args) {
 
