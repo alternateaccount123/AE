@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.*;
 
 
 class HelloWorld {
@@ -34,24 +34,37 @@ class HelloWorld {
 		subset.add(-1);
 		subset.add(10);
 
+		boolean answer = isValidSubsequence(set, subset);
+		System.out.println(answer);
 
+
+
+
+
+
+
+	}
+
+	//note sequence == subset , array == set 
+	public static boolean isValidSubsequence(List<Integer> array, List<Integer> sequence){
+		
+		
 		//traverse
-		for (int i = 0 ; i < subset.size(); i++){
-			
-			
-			int cur_subset_el_index = subset.get(i);
+		for (int i = 0 ; i < sequence.size(); i++){
+	
+	
+			int cur_sequence_el_index = sequence.get(i);
 
-			if (set.contains(cur_subset_el_index)){
-				System.out.println("set contains " + cur_subset_el_index);
+			if (array.contains(cur_sequence_el_index)){
+				System.out.println("set contains " + cur_sequence_el_index);
+				
 			}else{
 				System.out.println("go break , the it does not contain this el");
-				break;
+				return false;
 			}
 		}
 
-
-
-
+		return true;
 
 	}
 

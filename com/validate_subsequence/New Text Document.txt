@@ -1,1 +1,98 @@
-1234
+import java.util.*;
+
+class Program {
+  public static boolean isValidSubsequence(List<Integer> array, List<Integer> sequence) {
+
+        ArrayList <Integer> temp;
+        ArrayList <Integer> temp2;
+       //logic , is the sequence[] contained in array? 
+        /*
+        00, 01, 02, ...0arrsize
+        10, 11, 12, ...1arrsize
+        20,
+        ...
+
+//indexes
+        if 00 
+
+//check case 13 now not suer what phappens if number appears two times
+        */
+        //case: "sequence" cannot be bigger than "array"
+        if (sequence.size() > array.size()){return false;}
+    
+        int prevOrderCheck = -1;
+		for ( int i = 0 ; i < sequence.size(); i++){
+			for (int j = 0 ; j < array.size() ; j++){	
+
+              
+              if  (sequence.get(i) == array.get(j) && 
+                          j > prevOrderCheck){
+
+                if (prevOrderCheck < j){
+                  //nothing 
+                }else{
+                  return false;
+                }
+      
+                prevOrderCheck = j ;
+                
+              }else {
+                //nothing 
+              }
+
+              //case: "sequence" has a number that is not contained in "array"
+              if (array.contains(sequence.get(i)) == false){
+                return false;
+              }
+
+              temp = new ArrayList<Integer> (sequence.subList(i+1, sequence.size()));
+              //temp2 = new ArrayList<Integer> (sequence.subList(0, i-1)); 
+              //if (current index on sequence . is contained  ) 
+              //idk something like this ||  temp2.contains(sequence.get(i)) temp 2 is out bounds or something fix later
+              if ( temp.contains(sequence.get(i))  ){
+                return false;
+              }
+              
+			}
+		}
+
+
+     return true; 
+
+
+    /*
+        for ( int i = 0 ; i < sequence.size() ; i++){
+          if(array.contains(sequence.get(i))){
+          //keep looping
+          }else{
+            return false;
+          }
+        }
+
+        return true;
+    */
+
+    //int prevOrderCheck = -1;
+    //j acts likes curordercheck after first loop 
+    
+    /*
+    if  (sequence.get(i) == array.get(j) && 
+                          j > prevOrderCheck){
+
+        if (prevOrderCheck < j){
+          //nothing 
+        }else{
+          //return false
+        }
+      
+
+        prevOrderCheck = j ;
+    }else {
+        //nothing 
+
+    }
+
+
+    */
+  }
+}
