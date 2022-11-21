@@ -20,7 +20,7 @@ subset = [4,2]
 IMPORTANT NOTE: aware of elements order includes all other points 
  */
 
-class App {
+class HelloWorld {
 
 
     public static void main(String[] args) {
