@@ -17,7 +17,7 @@ i.e. this is NOT a subset
 set = [1,2,3,4] 
 subset = [4,2] 
 
-IMPORTANT NOTE: aware of elements order includes all other points 
+
  */
 
 class HelloWorld {

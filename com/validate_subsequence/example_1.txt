@@ -1,18 +1,6 @@
 import java.util.*;
 
-/*
 
-definition of subset: 
--subset must be contained inside the set 
--both set and subset must have the same number of ocurrences for each individual element
-i.e. this is NOT a subset 
-set = [1,2,3,4] 
-subset = [1,2,2] 
--aware element order, subset must be in the same order they appear in set
-i.e. this is NOT a subset 
-set = [1,2,3,4] 
-subset = [4,2] 
- */
 
 class HelloWorld {
 

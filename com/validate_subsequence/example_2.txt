@@ -1,25 +1,7 @@
 import java.util.*;
 
-/*
 
-definition of subsequence:
-a subsequence is a sequence that can be derived from another sequence 
-by deleting some elements without changing the order of the remaining elements 
-
--subset must be contained inside the set 
--set can have more ocurrences of certain element than subset
-i.e. this is NOT a subset 
-set = [1,2,3,4] 
-subset = [1,2,2] 
--aware elements order, subset must be in the same order they appear in set
-i.e. this is NOT a subset 
-set = [1,2,3,4] 
-subset = [4,2] 
-
-IMPORTANT NOTE: aware of elements order includes all other points 
- */
-
-class App {
+class HelloWorld {
 
 
     public static void main(String[] args) {
