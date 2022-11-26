@@ -13,7 +13,7 @@ class Main {
 
 		int answer = f(3);
 		System.out.println(answer);
-kjdfgsdergwege
+
 
 	}
 
