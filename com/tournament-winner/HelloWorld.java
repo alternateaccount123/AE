@@ -8,16 +8,22 @@ class HelloWorld {
 
 		
 		//store information about the competitions
-		ArrayList <ArrayList<String>> competitions = new ArrayList<>(); 		
+		ArrayList <ArrayList<String>> lcompetitions = new ArrayList<>(); 		
 		//each 1d arraylist form of [homeTeam,awayteam]
-		competitions.add(new ArrayList<String>(Arrays.asList("HTML", "C#")));
-		competitions.add(new ArrayList<String>(Arrays.asList("C#", "Python")));
-		competitions.add(new ArrayList<String>(Arrays.asList("Python", "HTML")));
+		lcompetitions.add(new ArrayList<String>(Arrays.asList("HTML", "C#")));
+		lcompetitions.add(new ArrayList<String>(Arrays.asList("C#", "Python")));
+		lcompetitions.add(new ArrayList<String>(Arrays.asList("Python", "HTML")));
 		
 		//store information about winner of round 
-		ArrayList <Integer> results = new ArrayList <Integer>();
-		results.add(0);results.add(0);results.add(1);
+		ArrayList <Integer> lresults = new ArrayList <Integer>();
+		lresults.add(0);lresults.add(0);lresults.add(1);
 
+		String winner = tournamentWinner(lcompetitions, lresults);
+		System.out.println(winner);
+	}
+
+
+	public static String tournamentWinner (ArrayList<ArrayList<String>> competitions, ArrayList<Integer> results) {
 
 		ArrayList <String> cur_competition ;
 		int cur_result;
@@ -67,16 +73,10 @@ class HelloWorld {
 		}
 		
 		System.out.println(table_of_scores);
-		System.out.println(cur_winner);
 
-
-	}
-
-
-	//public String tournamentWinner (ArrayList<ArrayList<String>> competitions, ArrayList<Integer> results) {
-
+		return cur_winner;
       
-  	//}
+  	}
 
 
 }
