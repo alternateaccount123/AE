@@ -32,12 +32,13 @@ class HelloWorld {
 			
 			System.out.println("cur_competition" + cur_competition + "\tcur_result: " + cur_result);
 
-			if (cur_result == 0){ //awayteam won 
-				//table_of_scores.add(cur_competition.get(1), Integer(cur_score + cur_result));
+			
+			if (cur_result == 0){ //awayteam won 		
+				table_of_scores.put(cur_competition.get(1), Integer.valueOf(cur_score + cur_result));
 			}
 
 			if (cur_result == 1){  //hometeam won 
-				//table_of_scores.add(cur_competition.get(0), cur_score + cur_result);
+				table_of_scores.put(cur_competition.get(0), cur_score + cur_result);
 			}
 
 		}
