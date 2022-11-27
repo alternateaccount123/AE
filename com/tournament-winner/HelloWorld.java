@@ -22,7 +22,8 @@ class HelloWorld {
 		ArrayList <String> cur_competition ;
 		int cur_result;
 		HashMap <String,Integer> table_of_scores = new HashMap <String, Integer> ();
-		int cur_score = 0;
+		String prev_winner = "";
+		String cur_winner = "";
 
 		//traverse competitions 
 		for (int i = 0 ; i< competitions.size() ;i++){
@@ -30,20 +31,43 @@ class HelloWorld {
 			cur_competition = competitions.get(i);
 			cur_result = results.get(i);
 			
-			System.out.println("cur_competition" + cur_competition + "\tcur_result: " + cur_result);
+			System.out.println("cur_competition" + cur_competition + "\tcur_result: " + cur_result );
 
+			//awayteam won 
+			if (cur_result == 0){ 
+				
+				String cur_awayteam = cur_competition.get(1);	
+
+				if (table_of_scores.get(cur_awayteam) == null){ //init map
+					table_of_scores.put(cur_awayteam, 0);
+				}
+
+				table_of_scores.put(cur_awayteam, Integer.valueOf(table_of_scores.get(cur_awayteam) + 3));
+				prev_winner = cur_competition.get(1);
+			}
+
+			//hometeam won 
+			if (cur_result == 1){  
+				String cur_hometeam = cur_competition.get(0);	
+
+				if (table_of_scores.get(cur_hometeam) == null){ //init map
+					table_of_scores.put(cur_hometeam, 0);
+				}
+
+				table_of_scores.put(cur_hometeam, Integer.valueOf(table_of_scores.get(cur_hometeam) + 3));
+				prev_winner = cur_competition.get(0);
+			}
+
+			//comparing current winner each iteration  
+			table_of_scores.put("", 0); //init map 
+			if (table_of_scores.get(cur_winner) < table_of_scores.get(prev_winner)){
+				cur_winner = prev_winner;
+			}
 			
-			if (cur_result == 0){ //awayteam won 		
-				table_of_scores.put(cur_competition.get(1), Integer.valueOf(cur_score + cur_result));
-			}
-
-			if (cur_result == 1){  //hometeam won 
-				table_of_scores.put(cur_competition.get(0), cur_score + cur_result);
-			}
-
 		}
 		
 		System.out.println(table_of_scores);
+		System.out.println(cur_winner);
 
 
 	}
