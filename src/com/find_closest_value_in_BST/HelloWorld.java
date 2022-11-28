@@ -40,22 +40,24 @@ class HelloWorld {
 		System.out.println(answer);
 
 	}
+	
+	
 
 	//10,5,2,1,5,15,13,14,22
-	public static int foo (BST my_tree, int target, int current_closest_value){
+	public static int foo (BST tree, int target, int current_closest_value){
 
-		
 
-		if(my_tree != null){
+		if(tree != null){
 
 			//update closest value 
-			if ( current_closest_value - target < my_tree.value - target){
-				current_closest_value = my_tree.value;
+			if ( Math.abs(current_closest_value - target) > Math.abs(tree.value - target)){
+				current_closest_value = tree.value;
+
 			}
 			//System.out.println(my_tree.value );
-			foo(my_tree.left, target, current_closest_value);
+			current_closest_value = foo(tree.left, target, current_closest_value);
 			
-			foo(my_tree.right, target, current_closest_value);
+			current_closest_value = foo(tree.right, target, current_closest_value);
 			//System.out.println(my_tree.value );
 			
 			
