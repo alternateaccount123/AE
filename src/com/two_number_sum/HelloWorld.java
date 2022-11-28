@@ -1,3 +1,5 @@
+package com.two_number_sum;
+
 import java.util.ArrayList;
 
 //reason why I not use the loop pattern : this is a straight translation from paper. 
