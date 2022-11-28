@@ -36,9 +36,14 @@ class HelloWorld {
 
 		int current_closest_value = 0;
 		//function call 
-		int answer = foo(t,13,0);
+		int answer = foo(t,13);
 		System.out.println(answer);
 
+	}
+	
+	public static int foo(BST tree, int target) {
+		int current_closest_value = 0;
+		return foo(tree, target, current_closest_value);
 	}
 	
 	
