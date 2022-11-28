@@ -4,6 +4,7 @@ import java.util.*;
 //https://www.algoexpert.io/questions/find-closest-value-in-bst
 
 
+
 //note: the particular sample case is a bst tree . but the whole thing is  just a regular binary tree . so if you change the sample it means 
 // you are working with a regular binary  tree 
 
@@ -77,55 +78,45 @@ class HelloWorld {
 
 	}
 	
-	public static int findClosestValueInBst(BST tree, int target) {
-		//initial value cannot be zero becuase if 0 is not in the binary tree 
-		//there is a chance that 0 is still gonna be the closest number (which is not necessarily true)
-		int current_closest_value = tree.value; 
-		return findClosestValueInBst(tree, target, current_closest_value);
-	}
-	
-	
+    public static int findClosestValueInBst(BST tree, int target) {
+        //initial value cannot be zero becuase if 0 is not in the binary tree 
+        //there is a chance that 0 is still gonna be the closest number (which is not necessarily true)
+        int current_closest_value = tree.value; 
+        return findClosestValueInBst(tree, target, current_closest_value);
+    }
+    
+    
 
-	//10,5,2,1,5,15,13,14,22
-	public static int findClosestValueInBst (BST tree, int target, int current_closest_value){
+    //10,5,2,1,5,15,13,14,22
+    public static int findClosestValueInBst (BST tree, int target, int current_closest_value){
 
 
-		if(tree != null){
+        if(tree != null){
 
+            //formula for the distance between to points in a non diagonal line 
+        	// d = |P1-P2|     works same as the number line with positive and negative numbers 
+			int distance_to_current_closest_value = Math.abs(current_closest_value - target);
+			int distance_to_tree_value = Math.abs(tree.value - target);
 			
-			int distance_to_current_closest_value = getDistanceBetweenNumbers(target, current_closest_value);
-			int distance_to_tree_value = getDistanceBetweenNumbers(target, tree.value);
-					
+            //update closest value 
 			if ( distance_to_current_closest_value  > distance_to_tree_value  ){
 				current_closest_value = tree.value;
 			}
+        
 
+            //System.out.println(my_tree.value );
+            current_closest_value = findClosestValueInBst(tree.left, target, current_closest_value);
+            
+            current_closest_value = findClosestValueInBst(tree.right, target, current_closest_value);
+            //System.out.println(my_tree.value );
+                    
 
-			//System.out.println(my_tree.value );
-			current_closest_value = findClosestValueInBst(tree.left, target, current_closest_value);
-			
-			current_closest_value = findClosestValueInBst(tree.right, target, current_closest_value);
-			//System.out.println(my_tree.value );
-					
+        }
 
-		}
+        return current_closest_value;
+        
 
-		return current_closest_value;
-		
-
-	}
-	
-	public static int getDistanceBetweenNumbers (int num1, int num2) {
-		
-		int expression = 0; 
-		if ( (num1 > 0 && num2 > 0) ||  (num1 < 0 && num2 < 0 )) {
-			expression = Math.abs(Math.abs(num1)   - Math.abs(num2) );
-		}else {
-			expression = Math.abs( Math.abs(num1)  + Math.abs(num2));
-		}
-		return expression;
-		
-	}
+    }
 
 
 
