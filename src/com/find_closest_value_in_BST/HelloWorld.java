@@ -4,7 +4,11 @@ import java.util.*;
 //https://www.algoexpert.io/questions/find-closest-value-in-bst
 
 //note: the particular sample case is a bst tree . but the whole thing is  just a regular binary tree . so if you change the sample it means 
-// you are qorking with a regular tree 
+// you are working with a regular binary  tree 
+
+//test case 1  -> input : bst tree    output:13 
+//fails test case 10 .
+//current problem: test case sample is too big to figure out what is wrong 
 
 class HelloWorld {
 
@@ -36,20 +40,20 @@ class HelloWorld {
 
 		int current_closest_value = 0;
 		//function call 
-		int answer = foo(t,13);
+		int answer = findClosestValueInBst(t,13);
 		System.out.println(answer);
 
 	}
 	
-	public static int foo(BST tree, int target) {
+	public static int findClosestValueInBst(BST tree, int target) {
 		int current_closest_value = 0;
-		return foo(tree, target, current_closest_value);
+		return findClosestValueInBst(tree, target, current_closest_value);
 	}
 	
 	
 
 	//10,5,2,1,5,15,13,14,22
-	public static int foo (BST tree, int target, int current_closest_value){
+	public static int findClosestValueInBst (BST tree, int target, int current_closest_value){
 
 
 		if(tree != null){
@@ -60,9 +64,9 @@ class HelloWorld {
 
 			}
 			//System.out.println(my_tree.value );
-			current_closest_value = foo(tree.left, target, current_closest_value);
+			current_closest_value = findClosestValueInBst(tree.left, target, current_closest_value);
 			
-			current_closest_value = foo(tree.right, target, current_closest_value);
+			current_closest_value = findClosestValueInBst(tree.right, target, current_closest_value);
 			//System.out.println(my_tree.value );
 			
 			
