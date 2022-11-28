@@ -34,20 +34,20 @@ class HelloWorld {
 
 		// function call
 		ArrayList <Integer> answer = new ArrayList <Integer>();
-		answer = foo(t);
+		answer = branchSums(t);
 		System.out.println(answer);
 
 	}
 	
 	//override
-	public static ArrayList<Integer> foo(BinaryTree my_tree){
+	public static ArrayList<Integer> branchSums(BinaryTree root){
 		int accumulated_num = 0;
 		ArrayList <Integer> arrl = new ArrayList <Integer>();
-		return arrl = foo(my_tree, accumulated_num, arrl);
+		return arrl = branchSums(root, accumulated_num, arrl);
 	}
 
     //1,2,4,8,9,5,10,3,6,7
-	public static ArrayList<Integer> foo(BinaryTree my_tree, int accumulate, ArrayList<Integer> array) {
+	public static ArrayList<Integer> branchSums(BinaryTree my_tree, int accumulate, ArrayList<Integer> array) {
 
 		
 		if (my_tree != null) {
@@ -62,9 +62,9 @@ class HelloWorld {
 			
 			
 			//System.out.println(my_tree.value);
-			array = foo(my_tree.left, accumulate, array);
+			array = branchSums(my_tree.left, accumulate, array);
 
-			array = foo(my_tree.right, accumulate, array);
+			array = branchSums(my_tree.right, accumulate, array);
 			//System.out.println(my_tree.value);
 
 		}
