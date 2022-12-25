@@ -1,4 +1,4 @@
-package com.two_number_sum;
+package com.algoexpert.arrays.green;
 
 import java.util.ArrayList;
 
@@ -6,7 +6,7 @@ import java.util.ArrayList;
 //https://www.algoexpert.io/questions/two-number-sum
 //import java.util.*;
 
-class HelloWorld {
+class TwoNumberSum {
 
 
 	public static void main(String[] args) {

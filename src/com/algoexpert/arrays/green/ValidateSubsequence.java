@@ -1,4 +1,4 @@
-package com.validate_subsequence;
+package com.algoexpert.arrays.green;
 
 import java.util.*;
 //final version , passes all tests 
@@ -22,7 +22,7 @@ subset = [4,2]
 
  */
 
-class HelloWorld {
+class ValidateSubsequence {
 
 
     public static void main(String[] args) {

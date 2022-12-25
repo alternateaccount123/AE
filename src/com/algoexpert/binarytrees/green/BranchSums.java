@@ -1,35 +1,35 @@
-package com.branch_sums;
+package com.algoexpert.binarytrees.green;
 
 import java.util.ArrayList;
 import java.util.List;
 
 //binary tree sample case
-class HelloWorld {
+class BranchSums {
 
 	public static void main(String[] args) {
 
 		// store
-		HelloWorld.BinaryTree t = new HelloWorld.BinaryTree(1);
+		BranchSums.BinaryTree t = new BranchSums.BinaryTree(1);
 		// System.out.println(t.value);
 
 		// preorder traversal like
-		HelloWorld.BinaryTree t2 = new HelloWorld.BinaryTree(2); 
+		BranchSums.BinaryTree t2 = new BranchSums.BinaryTree(2); 
 		t.left = t2;
-		HelloWorld.BinaryTree t3 = new HelloWorld.BinaryTree(4); 
+		BranchSums.BinaryTree t3 = new BranchSums.BinaryTree(4); 
 		t.left.left = t3;
-		HelloWorld.BinaryTree t4 = new HelloWorld.BinaryTree(8);
+		BranchSums.BinaryTree t4 = new BranchSums.BinaryTree(8);
 		t.left.left.left = t4;
-		HelloWorld.BinaryTree t5 = new HelloWorld.BinaryTree(9); 
+		BranchSums.BinaryTree t5 = new BranchSums.BinaryTree(9); 
 		t.left.left.right = t5;
-		HelloWorld.BinaryTree t6 = new HelloWorld.BinaryTree(5); 
+		BranchSums.BinaryTree t6 = new BranchSums.BinaryTree(5); 
 		t.left.right = t6;
-		HelloWorld.BinaryTree t7 = new HelloWorld.BinaryTree(10); 
+		BranchSums.BinaryTree t7 = new BranchSums.BinaryTree(10); 
 		t.left.right.left = t7;
-		HelloWorld.BinaryTree t8 = new HelloWorld.BinaryTree(3); 
+		BranchSums.BinaryTree t8 = new BranchSums.BinaryTree(3); 
 		t.right = t8;
-		HelloWorld.BinaryTree t9 = new HelloWorld.BinaryTree(6); 
+		BranchSums.BinaryTree t9 = new BranchSums.BinaryTree(6); 
 		t.right.left = t9;
-		HelloWorld.BinaryTree t10 = new HelloWorld.BinaryTree(7); 
+		BranchSums.BinaryTree t10 = new BranchSums.BinaryTree(7); 
 		t.right.right = t10;
 
 		// function call

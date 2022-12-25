@@ -1,9 +1,9 @@
-package com.nth_fibonacci;
+package com.algoexpert.recursion.green;
 //note: by making diagram , you can solve evrtyhing 
 //just need to know the flow of a binary tree  
 
 
-class Main {
+class NthFibonacci {
 //edited from github master  a
 
 	public static void main(String[] args) {

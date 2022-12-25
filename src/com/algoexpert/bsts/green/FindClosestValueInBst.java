@@ -1,4 +1,4 @@
-package com.find_closest_value_in_BST;
+package com.algoexpert.bsts.green;
 
 import java.util.*;
 //https://www.algoexpert.io/questions/find-closest-value-in-bst
@@ -13,40 +13,40 @@ import java.util.*;
 //test case 10 -> input : -1    expectedoutput: 1   output:1 solved at init of cur_closest_value
 
 
-class HelloWorld {
+class FindClosestValueInBst {
 
 	public static void main(String[] args) {
 		
 		
 		//store sample for bst 
-        HelloWorld.BST t = new HelloWorld.BST (100); 
+        FindClosestValueInBst.BST t = new FindClosestValueInBst.BST (100); 
         //System.out.println(t.value);        
         //preorder traversal like 
-        t.left =  new HelloWorld.BST (5);
-        t.left.left =  new HelloWorld.BST (2);
-        t.left.left.left =  new HelloWorld.BST (1);
-        t.left.left.left.left =  new HelloWorld.BST (-51);
-        t.left.left.left.left.left =  new HelloWorld.BST (-403);
-        t.left.left.left.right =  new HelloWorld.BST (1);
-        t.left.left.left.right.right =  new HelloWorld.BST (1);
-        t.left.left.left.right.right.right =  new HelloWorld.BST (1);
-        t.left.left.left.right.right.right.right =  new HelloWorld.BST (1);
-        t.left.left.right =  new HelloWorld.BST (3);
-        t.left.right =  new HelloWorld.BST (15);
-        t.left.right.left =  new HelloWorld.BST (5);
-        t.left.right.right =  new HelloWorld.BST (22);
-        t.left.right.right.right =  new HelloWorld.BST (57);
-        t.left.right.right.right.right =  new HelloWorld.BST (60);        
-        t.right =  new HelloWorld.BST (502);
-        t.right.left =  new HelloWorld.BST (204);
-        t.right.left.left =  new HelloWorld.BST (203);
-        t.right.left.right =  new HelloWorld.BST (205);
-        t.right.left.right.right =  new HelloWorld.BST (207);
-        t.right.left.right.right.left =  new HelloWorld.BST (206);
-        t.right.left.right.right.right =  new HelloWorld.BST (208);
-        t.right.right =  new HelloWorld.BST (55000);
-        t.right.right.left =  new HelloWorld.BST (1001);
-        t.right.right.left.right =  new HelloWorld.BST (4500);
+        t.left =  new FindClosestValueInBst.BST (5);
+        t.left.left =  new FindClosestValueInBst.BST (2);
+        t.left.left.left =  new FindClosestValueInBst.BST (1);
+        t.left.left.left.left =  new FindClosestValueInBst.BST (-51);
+        t.left.left.left.left.left =  new FindClosestValueInBst.BST (-403);
+        t.left.left.left.right =  new FindClosestValueInBst.BST (1);
+        t.left.left.left.right.right =  new FindClosestValueInBst.BST (1);
+        t.left.left.left.right.right.right =  new FindClosestValueInBst.BST (1);
+        t.left.left.left.right.right.right.right =  new FindClosestValueInBst.BST (1);
+        t.left.left.right =  new FindClosestValueInBst.BST (3);
+        t.left.right =  new FindClosestValueInBst.BST (15);
+        t.left.right.left =  new FindClosestValueInBst.BST (5);
+        t.left.right.right =  new FindClosestValueInBst.BST (22);
+        t.left.right.right.right =  new FindClosestValueInBst.BST (57);
+        t.left.right.right.right.right =  new FindClosestValueInBst.BST (60);        
+        t.right =  new FindClosestValueInBst.BST (502);
+        t.right.left =  new FindClosestValueInBst.BST (204);
+        t.right.left.left =  new FindClosestValueInBst.BST (203);
+        t.right.left.right =  new FindClosestValueInBst.BST (205);
+        t.right.left.right.right =  new FindClosestValueInBst.BST (207);
+        t.right.left.right.right.left =  new FindClosestValueInBst.BST (206);
+        t.right.left.right.right.right =  new FindClosestValueInBst.BST (208);
+        t.right.right =  new FindClosestValueInBst.BST (55000);
+        t.right.right.left =  new FindClosestValueInBst.BST (1001);
+        t.right.right.left.right =  new FindClosestValueInBst.BST (4500);
 	    
 		/*
 		//store sample for bst 

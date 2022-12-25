@@ -1,8 +1,8 @@
-package com.tournament_winner;
+package com.algoexpert.arrays.green;
 
 import java.util.*;
 
-class HelloWorld {
+class TournamentWinner {
 
 
 	public static void main(String[] args) {
