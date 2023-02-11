@@ -29,12 +29,13 @@ class ValidateSubsequence {
 
         
         //to memory 
+    	//1,2,3,4
         ArrayList <Integer> set = new ArrayList <Integer>();
         set.add(1);
         set.add(2);
         set.add(3);
         set.add(4);
-
+        //4,2
         ArrayList <Integer> subset = new ArrayList <Integer>();
         subset.add(4);
         subset.add(2);
@@ -97,6 +98,7 @@ class ValidateSubsequence {
 
                 System.out.println("set contains " + cur_sequence_el);
                 prev_index = array.indexOf(cur_sequence_el);
+                //prev_index = i-1;  //won work dont use this 
                 array.set(array.indexOf(cur_sequence_el),null);
             
             }else{
